@@ -12,20 +12,20 @@ jobs:
           repository: https://bitbucket.org/n_piper/personal-mba.git
           token: ${{ secrets.BITBUCKET_API_TOKEN }}
           folder: ./app/DIST
-     - name: Install Node.js and NPM
-       uses: actions/setup-node@v2
-       with:
-        node-version: '16.x'
+      - name: Install Node.js and NPM
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
 
-     - name: Install dependencies
-       run: npm install
+      - name: Install dependencies
+        run: npm install
 
-     - name: Generate index.html
-       run: npm run build
+      - name: Generate index.html
+        run: npm run build
 
-     - name: Deploy to Github Pages
-       uses: peaceiris/actions-gh-pages@v3
-       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./DIST
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./DIST
 
