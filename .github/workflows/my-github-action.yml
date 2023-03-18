@@ -9,6 +9,9 @@ jobs:
       - name: Clone bitbucket
         run: git clone https://x-token-auth:${{ secrets.BITBUCKET_API_TOKEN }}@bitbucket.org/n_piper/personal-mba.git && cd ./personal-mba
 
+      - name: Where am I?
+        run: pwd && ls -ltra
+
       - name: Install Node.js and NPM
         uses: actions/setup-node@v2
         with:
