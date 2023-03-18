@@ -11,21 +11,21 @@ jobs:
         with:
           repository: https://bitbucket.org/n_piper/personal-mba.git
           token: ${{ secrets.BITBUCKET_API_TOKEN }}
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build Application
-        run: npm run build
-        working-directory: ./app
-
-      - name: Deploy to Github Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
           folder: ./app/DIST
+     - name: Install Node.js and NPM
+       uses: actions/setup-node@v2
+       with:
+        node-version: '16.x'
+
+     - name: Install dependencies
+       run: npm install
+
+     - name: Generate index.html
+       run: npm run build
+
+     - name: Deploy to Github Pages
+       uses: peaceiris/actions-gh-pages@v3
+       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./DIST
+
