@@ -6,12 +6,9 @@ jobs:
   clone:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-        with:
-          repository: https://bitbucket.org/n_piper/personal-mba.git
-          token: ${{ secrets.BITBUCKET_API_TOKEN }}
-          folder: ./app/DIST
+      - name: Clone bitbucket
+        run: git clone https://x-token-auth:${{ secrets.BITBUCKET_API_TOKEN }}@bitbucket.org/n_piper/personal-mba.git
+
       - name: Install Node.js and NPM
         uses: actions/setup-node@v2
         with:
