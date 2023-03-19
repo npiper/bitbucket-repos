@@ -28,6 +28,10 @@ jobs:
 
       - name: Generate Site
         run: cd personal-mba && npx antora antora-playbook.yml
+
+      - name: Install Antora
+        run: cd personal-mba && ls -ltra
+
         
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
