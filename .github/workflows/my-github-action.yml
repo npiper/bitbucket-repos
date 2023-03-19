@@ -29,7 +29,7 @@ jobs:
       - name: Generate Site
         run: cd personal-mba && npx antora antora-playbook.yml
 
-      - name: Install Antora
+      - name: Show site contents
         run: cd personal-mba && ls -ltra
 
         
