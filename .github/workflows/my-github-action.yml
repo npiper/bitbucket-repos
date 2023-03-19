@@ -24,10 +24,10 @@ jobs:
         run: cd personal-mba && npm install
 
       - name: Install Antora
-        run: npm i antora
+        run: cd personal-mba && npm i antora
 
       - name: Generate Site
-        run: npx antora antora-playbook.yml
+        run: cd personal-mba && npx antora antora-playbook.yml
         
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
