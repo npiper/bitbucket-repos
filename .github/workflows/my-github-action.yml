@@ -23,10 +23,13 @@ jobs:
       - name: Install dependencies
         run: cd personal-mba && npm install
 
-      - name: Generate index.html
-        run: cd personal-mba && npm run dist
+      - name: Install Antora
+        run: npm i antora
 
-      - name: Deploy to Github Pages
+      - name: Generate Site
+        run: npx antora antora-playbook.yml
+        
+      - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
