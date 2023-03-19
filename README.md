@@ -22,4 +22,7 @@ then copies the `dist` folder and commits into the GH Pages branch.
 
 ## References
 
+https://github.com/shimataro/test-clone-bitbucket-in-actions/blob/master/.github/workflows/ci.yml[Gist of a bitbucket checkout]
+
+https://docs.antora.org/antora/latest/publish-to-github-pages/[Antora - Publish to Github pages]
 
