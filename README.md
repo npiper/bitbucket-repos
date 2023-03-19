@@ -20,9 +20,14 @@ then copies the `dist` folder and commits into the GH Pages branch.
  * Bitbucket token - clone / authenticate to private Repo
  * GH Token - Publish Antora site once generated to GH Pages
 
+## Sources
+
+https://bitbucket.org/n_piper/personal-mba/src/master/
+
 ## References
 
 https://github.com/shimataro/test-clone-bitbucket-in-actions/blob/master/.github/workflows/ci.yml[Gist of a bitbucket checkout]
 
 https://docs.antora.org/antora/latest/publish-to-github-pages/[Antora - Publish to Github pages]
 
+https://docs.antora.org/antora/latest/playbook/private-repository-auth/[Antora - Private Repository Authentication]
