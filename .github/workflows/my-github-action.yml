@@ -30,7 +30,7 @@ jobs:
         run: cd personal-mba && npx antora antora-playbook.yml
 
       - name: Show site contents
-        run: cd personal-mba && ls -ltra
+        run: cd personal-mba/dist && ls -ltra
 
         
       - name: Publish to GitHub Pages
