@@ -2,6 +2,8 @@
 
 Objective: Publish an Antora site stored on Bitbucket on GithubPages
 
+How is it?
+
 https://github.com/npiper/bitbucket-repos.git
 
 `personal-mba-token`
