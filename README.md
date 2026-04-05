@@ -17,7 +17,6 @@ The Github actions checks out bitbucket repo, installs and builds antora
 then copies the `dist` folder and commits into the GH Pages branch.
  
   
-
 ## Secrets needed
 
  * Bitbucket token - clone / authenticate to private Repo
